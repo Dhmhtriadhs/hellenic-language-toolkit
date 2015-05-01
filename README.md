@@ -1,6 +1,3 @@
-Home Studio Voice Tools version 0.x
-Original code by Dimitriadis Dimitrios <karaokesuite@gmail.com>, in 2010-2011
-
 This is open source software released under the BSD license.
 The full text of this license is found in the file 'LICENSE',
 included with this source code package.
