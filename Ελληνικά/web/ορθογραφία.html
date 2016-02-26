@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<TITLE>ἑγἐ - Ἑλληνικά Γλωσσικά Ἐργαλεία: Ορθογραφία</TITLE>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/ortho.js"></script>
+</head>
+<BODY LANG="el-GR" DIR="LTR" onload="EN_APXH()">
+	<div>
+		<table align="center">
+			<tr>
+				<td nowrap><h2 align="left" style="margin: 0px; padding: 0;">Ἑλληνικά
+						Γλωσσικά Ἐργαλεία</h2></td>
+				<td width="70%" align="center"><a href='log_out'><h3>Έξοδος</h3></a></td>
+				<td nowrap><h2 align="right" style="margin: 0px; padding: 0;">
+						Ἑλληνικά: Ορθογραφία <a href='index.html'>⤶</a>
+					</h2></td>
+			</tr>
+		</table>
+	</div>
+	<div align="center" style="margin: 0px; padding: 0;">
+		<br />
+		<table width="50%" align="center">
+			<tbody>
+				<tr>
+					<td rowspan="6"><select id="ορθογραφίες" size=20
+						onclick="updateOrthografia();"></select></td>
+					<td align="left"><button id="boh1" onclick="boh_theia();">Βοήθεια</button></td>
+					<td align="right"><button
+							onclick="$('ορθογραφίες').selectedIndex=-1;nea();">Νέα</button>
+						<button onclick="apothikeusi();">Αποθήκευση</button>
+						<button onclick="diagrafi();">Διαγραφή</button></td>
+				</tr>
+				<tr>
+					<td>Όνομα:<input id="όνομα" type="text"></input></td>
+					<td><input id="αρχή" name="θέση" type="radio" checked>αρχή</input>
+						<input id="μέση" name="θέση" type="radio">μέση</input> <input
+						id="τέλος" name="θέση" type="radio">τέλος</input></td>
+				</tr>
+				<tr>
+					<td colspan=2 nowrap>Γράμμα:<input id="γράμμα" type="text"></input>
+						Αντιστοιχίες<input id="αντιστοιχίες" type="text"></input>
+						<button onclick="add()">+</button>
+						<button onclick="remove()">-</button>
+						<button onclick="zero()">0</button></td>
+				</tr>
+				<tr>
+					<td>Χωρίς: <input id="κεφαλαία" type="checkbox">κεφαλαία</input>
+						<input id="πνεύματα" type="checkbox">πνεύματα</input> <input
+						id="τόνοι" type="checkbox">τόνους</input></td>
+					<td>Ευρετήρια:<input id="εμπρός" type="checkbox"
+						title="(IME,OCR)"> εμπρός</input> <input id="πίσω" type="checkbox"
+						title="(συνθετικά, άγνωστες λέξεις)"> πίσω</input></td>
+				</tr>
+				<tr>
+					<td colspan=2><table width="100%">
+							<tr>
+								<td>Αρχή</td>
+								<td>Μέση</td>
+								<td>Τέλος</td>
+								<td nowrap><input id="δοκιμή" type="text"></input>
+									<button onclick="dokimh()">Δοκιμή</button></td>
+							</tr>
+							<tr>
+								<td style="vertical-align: top;"><select id="οαρχή" size=5
+									onclick="edit('οαρχή')"></select></td>
+								<td style="vertical-align: top;"><select id="ομέση" size=5
+									onclick="edit('ομέση')"></select></td>
+								<td style="vertical-align: top;"><select id="οτέλος" size=5
+									onclick="edit('οτέλος')"></select></td>
+								<td style="vertical-align: top;"><textarea id="αποτέλεσμα"></textarea></td>
+							</tr>
+						</table></td>
+				</tr>
+				<tr>
+					<td align="left"><button id="boh1" onclick="boh_theia();">Βοήθεια</button></td>
+					<td align="right"><button
+							onclick="$('ορθογραφίες').selectedIndex=-1;nea();">Νέα</button>
+						<button onclick="apothikeusi();">Αποθήκευση</button>
+						<button onclick="diagrafi();">Διαγραφή</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</BODY>
+</HTML>

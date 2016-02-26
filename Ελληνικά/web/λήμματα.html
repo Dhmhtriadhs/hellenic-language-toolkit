@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+<title>ἑγἐ - Ἑλληνικά Γλωσσικά Ἐργαλεία: Λήμματα</title>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/klish.js"></script>
+</head>
+<body lang="el-GR" dir="LTR" onload="EN_APXH()">
+	<div align="center" style="margin: 0px; padding: 0;">
+		<br />
+		<div align="center" class="main">
+			<div align="center" id="content">
+				<div>
+					<table align="center">
+						<tr>
+							<td nowrap><h2 align="left" style="margin: 0px; padding: 0;">Ἑλληνικά
+									Γλωσσικά Ἐργαλεία</h2></td>
+							<td width="70%" align="center"><a href='log_out'><h3>Έξοδος</h3></a></td>
+							<td nowrap><h2 align="right"
+									style="margin: 0px; padding: 0;">
+									Ἑλληνικά:Λήμματα <a href='index.html'>⤶</a>
+								</h2></td>
+						</tr>
+					</table>
+				</div>
+				<table>
+					<tr>
+						<td colspan=2>Διάλεκτος:<select id="διάλεκτος"
+							onchange="updateKatalhjeis();"></select></td>
+						<td>
+							<table>
+								<tr>
+									<th id="ουσιαστικό" onclick="allagiMTL('ουσιαστικό');">Ουσιαστικά</th>
+									<th id="επίθετο" onclick="allagiMTL('επίθετο');">Επίθετα</th>
+									<th id="ρήμα" onclick="allagiMTL('ρήμα');">Ρήματα/Μετοχές</th>
+								</tr>
+							</table>
+						</td>
+						<td rowspan=2>
+							<table>
+								<tr>
+									<td>ιστορικό</td>
+								</tr>
+								<tr>
+									<td width="100%"><select id="ιστορία" width="100%"
+										size="4" onclick="epilogiIstorias();"
+										onkeyup="epilogiIstorias();"></select></td>
+								</tr>
+								<tr>
+									<td><button onclick="trexon()">Τρέχον</button></td>
+								</tr>
+								<tr>
+									<td>Ἐτικέτες<input id="ἐτικέτες" type="text"
+										style="width: 100%;" /></td>
+								</tr>
+								<tr>
+									<td><select id="μετα_κλίμα"><option>Μεταδεδομένα</option>
+											<option>Κλίμακες</option></select><br /> <input size="10" type="text"
+										id="μκόνομα" list="μκ_συμπλήρωση" autocomplete="on"
+										onblur="metaklimatimes();" /> <datalist id="μκ_συμπλήρωση"></datalist>
+										<input size="10" type="text" id="μκτιμή"
+										list="μκ_τιμή_συμπλήρωση" autocomplete="on" /> <datalist
+											id="μκ_τιμή_συμπλήρωση"></datalist>
+										<button onclick="προσθήκη_μκ();">+</button>
+										<button onclick="αφαίρεση_μκ();">-</button>
+										<button onclick="zero_μκ();">0</button> <br /> <select
+										onclick="επιλογή_μκ();" id="μετα_κλίμακες" size="4"
+										style="width: 100%;"></select></td>
+								</tr>
+								<tr>
+									<td>Παρατηρήσεις<br /> <textarea id="Παρατηρήσεις"
+											rows="4" style="width: 100%;" cols=""></textarea></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>αρχικά<br /> <select id="αρχικά" onchange="fillLexeis()"
+							size="10"></select></td>
+						<td>λέξεις<br /> <select id="λέξεις" onchange="istoriko()"
+							size="10"></select></td>
+						<td>
+							<div id="εκτίμηση">
+								<!-- <table>
+							<tr>
+								<td>Ενεστώτας</td><td><input id="εεενεστώτα"></input></td>
+								<td><input id="επενεστώτα"></input></td>
+							</tr><tr>
+								<td>Παρατατικός</td><td><input id="εεπαρατατικός"></input></td>
+								<td><input id="εππαρατατικός"></input></td>
+							</tr><tr>
+								<td>Μέλλοντας</td><td><input id="εεμέλλοντα"></input></td>
+								<td><input id="επμέλλοντα"></input></td>
+							</tr><tr>
+								<td>Αόριστος</td><td><input id="εεαόριστος"></input></td>
+								<td><input id="εμαόριστος"></input></td>
+								<td><input id="επαόριστος"></input></td>
+							</tr><tr>
+								<td>Παρακείμενος</td><td><input id="εεπαρακείμενος"></input></td>
+								<td><input id="εππαρακείμενος"></input></td>
+							<tr>
+							</tr>
+						</table>-->
+							</div>
+							<div id="κλιτά">
+								<table>
+									<tr>
+										<th>συνθετικό</th>
+										<td><input type="text" id="συνθετικό" /></td>
+										<th>λήμμα</th>
+										<td><input type="text" id="λήμμα" /></td>
+									</tr>
+									<tr id="αυξήσεις">
+										<th>αύξηση</th>
+										<td><input type="text" id="αύξηση" /></td>
+										<th>παρακείμενου</th>
+										<td><input type="text" id="παρακείμενου" /></td>
+									</tr>
+									<tr>
+										<th id="ε_ενεστωτική">ενεστωτική</th>
+										<td><input type="text" id="ενεστωτική" /></td>
+										<th></th>
+										<td colspan="2"></td>
+									</tr>
+									<tr id="ονόματα">
+										<th id="ε_γένος">Γένος</th>
+										<td><select id="γένος"><option>αρσενικό</option>
+												<option>θηλυκό</option>
+												<option>ουδέτερο</option></select></td>
+										<td><select id="καταλήξεις"
+											onclick="updateTonous();kline();"
+											onkeyup="updateTonous();kline();"><option>καταλήξεις</option></select></td>
+										<td><select id="τονισμοί" onchange="kline();"
+											onkeyup="kline();"><option>τονισμοί</option></select> <input
+											id="όλα" type="checkbox">Όλα</input></td>
+									</tr>
+									<tr id="ρήμα1">
+										<th><select id="καταλήξεις_ρημάτων"
+											onclick="xronoiRhma();klineRhma();"
+											onkeyup="xronoiRhma();klineRhma();"><option>καταλήξεις</option></select></th>
+										<th>ρήμα</th>
+										<th>μετοχή</th>
+									</tr>
+									<tr id="ρήμα2">
+										<th>ενεστώτας</th>
+										<td><select id="ρενεστώτας" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+										<td><select id="μενεστώτας" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+									</tr>
+									<tr id="ρήμα3">
+										<th>παρατατικός</th>
+										<td><select id="ρπαρατατικός" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+										<td></td>
+									</tr>
+									<tr id="ρήμα4">
+										<th>αόριστος</th>
+										<td><select id="ραόριστος" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+										<td><select id="μαόριστος" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+									</tr>
+									<tr id="ρήμα5">
+										<th>παρακείμενος</th>
+										<td><select id="ρπαρακείμενος" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+										<td><select id="μπαρακείμενος" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+									</tr>
+									<tr id="ρήμα6">
+										<th>υπερσυντέλικος</th>
+										<td><select id="ρυπερσυντέλικος" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+										<td></td>
+									</tr>
+									<tr id="ρήμα7">
+										<th>μέλλοντας</th>
+										<td><select id="ρμέλλοντας" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+										<td><select id="μμέλλοντας" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+									</tr>
+									<tr id="ρήμα8">
+										<th>συντελεσμένος μέλλοντας</th>
+										<td><select id="ρσμέλλοντας" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+										<td><select id="μσμέλλοντας" onclick="klineRhma();"
+											onkeyup="klineRhma();"><option>καταλήξεις</option></select></td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<button onclick="nea();">Νέα λέξη</button>
+											<button onclick="removeOptionsAlternate($('ιστορία'));">Αντιγραφή</button>
+											<button onclick="apothikeusi();">Αποθήκευση</button>
+											<button onclick="diagrafh();">Διαγραφή</button>
+											<button id="κΚλίσηΌνομα" onclick="kline();">Κλίση</button>
+											<button id="κΚλίσηΡήμα" onclick="klineRhma();">Κλίση</button>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+				<div id="αποτελέσματα" align="center">αποτελέσματα</div>
+				<br>
+				<br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

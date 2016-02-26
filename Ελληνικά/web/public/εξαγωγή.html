@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<TITLE>ἑγἐ - Ἑλληνικά Γλωσσικά Ἐργαλεία: Εξαγωγή</TITLE>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/ejagogi.js"></script>
+</head>
+<BODY LANG="el-GR" DIR="LTR" onload="loadDialektous();loadEjagogi();">
+	<div>
+		<table align="center">
+			<tr>
+				<td nowrap><h2 align="left" style="margin: 0px; padding: 0;">Ἑλληνικά
+						Γλωσσικά Ἐργαλεία</h2></td>
+				<td width="70%" align="center"><a href='.'><h3>Είσοδος</h3></a></td>
+				<td nowrap><h2 align="right" style="margin: 0px; padding: 0;">
+						Ἑλληνικά: Εξαγωγή<a href='index.html'>⤶</a>
+					</h2></td>
+			</tr>
+		</table>
+	</div>
+	<div align="center" style="margin: 0px; padding: 0;">
+		<br />
+		<table align="center">
+			<tr>
+				<td><h2 colspan=5>Εξαγωγή</h2></td>
+			</tr>
+			<tr>
+				<td>Έτοιμα</td>
+				<td><input id="HLT" type="radio" name="τύπος" checked>ορθογραφία
+					HLT</input></td>
+				<td><input id="json" type="radio" name="τύπος">json</input></td>
+				<td><input id="csv" type="radio" name="τύπος">csv</input></td>
+				<td><input id="hunspell" type="radio" name="τύπος">hunspell</input></td>
+			</tr>
+			<tr>
+				<td rowspan=3 style="vertical-align: top;">
+				<select id="ετοιμα" size="7"></select></td>
+				<td colspan=4>Διάλεκτοι:<br>
+					<div id="διάλεκτοι"></div></td>
+			</tr>
+			<tr>
+				<td colspan=4>Κωδικός γλώσσας:<input id="γλώσσα" type="text"
+					list="συμπλήρωση" autocomplete="on"></input> <datalist
+						id="συμπλήρωση">
+					<option value="gr">
+					<option value="grc">
+					<option value="el_GR">
+					<option value="grc_GR">
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td colspan=4><progress id="prog" value="0" min="0" max="100"></progress>
+					<button id="δημιουργία" onclick="create()">Δημιουργία</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="diagrafh()">Διαγραφή</button></td>
+				<td colspan=4><button onclick="download()">Κατέβασμα</button></td>
+			</tr>
+		</table>
+	</div>
+</BODY>
+</HTML>

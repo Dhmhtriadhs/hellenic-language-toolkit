@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<TITLE>ἑγἐ - Ἑλληνικά Γλωσσικά Ἐργαλεία: Κατηγοριοτονισμοί</TITLE>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/katon.js"></script>
+</head>
+<BODY LANG="el-GR" DIR="LTR" onload="EN_APXH()">
+	<div align="center" style="margin: 0px; padding: 0;">
+		<br />
+		<div align="center" class="main">
+			<div align="center" id="content">
+				<div>
+					<table align="center">
+						<tr>
+							<td nowrap><h2 align="left" style="margin: 0px; padding: 0;">Ἑλληνικά
+									Γλωσσικά Ἐργαλεία</h2></td>
+							<td width="70%" align="center"><a href='log_out'><h3>Έξοδος</h3></a></td>
+							<td nowrap><h2 align="right"
+									style="margin: 0px; padding: 0;">
+									Ἑλληνικά: Κατηγοριοτονισμοί<a href='index.html'>⤶</a>
+								</h2></td>
+						</tr>
+					</table>
+				</div>
+				<table>
+					<tr>
+						<th id="ρήμα" onclick="allagiMTL('ρήμα');">Ρήματα</th>
+						<th id="μετοχή" onclick="allagiMTL('μετοχή');">Μετοχές</th>
+						<td rowspan=4><table>
+								<tr>
+									<td>ιστορικό</td>
+								</tr>
+								<tr>
+									<td width="100%"><select id="ιστορία" width="100%" size=8
+										onclick="epilogiIstorias();" onkeyup="epilogiIstorias();"></select></td>
+								</tr>
+								<tr>
+									<td><button onclick="trexon()">Τρέχον</button></td>
+								</tr>
+								<tr>
+									<td>Ἐτικέτες<input id="ἐτικέτες" type="text"
+										style="width: 100%;"></input></td>
+								</tr>
+								<tr>
+									<td>Παρατηρήσεις<br /> <textarea id="Παρατηρήσεις" rows=4
+											style="width: 100%;"></textarea></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>Διάλεκτος:<select id="διάλεκτος"
+							onchange="updateXronoi();"></select></td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<div>
+								<select id="χρόνος" onchange="listXrono();updateKaton();"
+									onkeyup="listXrono();updateKaton();" size=8>
+								</select> <select id="κκατηγορίες" width="80%" size=8
+									onclick="loadIstoria();" onkeyup="loadIstoria();"></select><br>
+								<table>
+									<tr id="εγκλίσεις">
+										<td ><input id="εόλα" type="checkbox">Όλα</input></td>
+										<td id="d1">οριστική</td>
+										<td id="d2">υποτακτική</td>
+										<td id="d3">ευκτική</td>
+										<td id="d4">προστακτική</td>
+										<td id="d5">απαρέμφατο</td>
+									</tr>
+									<tr id="γένη">
+										<td ><input id="γόλα" type="checkbox" onclick="tonousola();">Όλα</input></td>
+										<td id="e1">Αρσενικό</td>
+										<td id="e2">Θηλυκό</td>
+										<td id="e3">Ουδέτερο</td>
+									</tr>
+									<tr>
+										<td id="f0">Ενεργητική</td>
+										<td id="a1">
+											<select id="ek0" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et0" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="a2">
+											<select id="ek1" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et1" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="a3">
+											<select id="ek2" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et2" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="a4">
+											<select id="ek3" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et3" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="a5">
+											<select id="ek4" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et4" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+									</tr>
+									<tr>
+										<td id="f1">Μέση</td>
+										<td id="b1">
+											<select id="ek5" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et5" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="b2">
+											<select id="ek6" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et6" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="b3">
+											<select id="ek7" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et7" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="b4">
+											<select id="ek8" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et8" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="b5">
+											<select id="ek9" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et9" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+									</tr>
+									<tr>
+										<td id="f2">Παθητική</td>
+										<td id="c1">
+											<select id="ek10" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et10" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="c2">
+											<select id="ek11" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et11" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="c3">
+											<select id="ek12" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et12" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="c4">
+											<select id="ek13" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et13" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+										<td id="c5">
+											<select id="ek14" onchange="tonous(this.id);dokimh();"></select>
+											<select id="et14" onclick="dokimh();" onkeyup="dokimh();"></select></td>
+									</tr>
+								</table>
+								<button onclick="nea()">Νέο</button>
+								<button
+									onclick="$('κκατηγορίες').selectedIndex = -1;while ($('ιστορία').length>0) {$('ιστορία').remove(0);};">
+									Αντιγραφή</button>
+								<button onclick="apothikeusi();">Αποθήκευση</button>
+								<button onclick="diagrafi();">Διαγραφή</button>
+								<input id="δοκιμή" type="text" value="ανανα"></input>
+								<button onclick="dokimh();">Δοκιμή</button>
+								<button onclick="boh_theia();">Βοήθεια</button>
+								<br>
+								<textarea id="είσοδος" readonly
+									style="font-family: monospace; font-size: 18;" cols=80; rows=10></textarea>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</BODY>
+</HTML>

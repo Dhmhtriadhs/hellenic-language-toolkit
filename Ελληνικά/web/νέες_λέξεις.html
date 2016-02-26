@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<TITLE>ἑγἐ - Ἑλληνικά Γλωσσικά Ἐργαλεία: Ουσιαστικά</TITLE>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/klish.js"></script>
+</head>
+<BODY LANG="el-GR" DIR="LTR" onload="loadOnomata()">
+
+<div align="center" style="margin: 0px; padding: 0;">
+
+<br />
+<div align="center" class="main">
+
+
+<div align="center" id="content">
+<div>
+<table align="center" >
+	<tr><td nowrap><h2 align="left" style="margin: 0px; padding: 0;">Ἑλληνικά Γλωσσικά Ἐργαλεία</h2></td>
+	<td width="70%" align="center"><a href='.'><h3>Είσοδος</h3></a></td>
+	<td><h3>Διάλεκτος</h3></td>
+	<td><button type="button" id="κοινή" onclick="toggle_d(this.id);">Kοινή</button></td>
+	<td><button type="button" id="δημοτική" onclick="toggle_d(this.id);">Δημοτική</button></td>
+	<td nowrap><h2 align="right" style="margin: 0px; padding: 0;">Ἑλληνικά: Ονόματα<a href='index.html'>⤶</a></h2></td></tr>
+</table>
+</div>
+<h2><select id="τύπος" onchange="loadOnomata();"><option value="ουσιαστικό">Ουσιαστικά</option>
+	<option value="επίθετο">Επίθετα</option></select></h2>
+<table>
+	<tr>
+		<td rowspan=2>Νέες<br/><select id="αρχικά" onchange="fillLexeis()" size=10></select></td>
+		<td rowspan=2>Ελεγμένες<br/><select id="λέξεις" onchange="klineOnomata()" size=10></select></td>
+		<td rowspan=2><div id="Τίτλος" align="center">
+		<table>
+		<tr><td>συνθετικό</td><td>λήμμα</td></tr>
+		<tr><td><input type="text" id="συνθετικό"></input></td>
+			<td><input type="text" id="λήμμα"></input></td>
+			</tr>
+		<tr>
+			<td><select id="γένος"><option>Αρσενικό</option><option>Θηλυκό</option>
+				<option>Ουδέτερο</option></select>
+				<select id="είδος"><option>Κανονικό</option><option>Άκλητο</option>
+				<option>Ανώμαλο</option></select>
+			</td><td><select id="καταλήξεις" onclick="updateTonous();"><option>καταλήξεις</option></select>
+				<select id="τονισμοί"><option>τονισμοί</option></select></td>
+			</tr>
+			<tr><td colspan=2><button onclick="nea();">Νέα λέξη</button>
+			<button onclick="apothikeusi();">Αποθήκευση</button>
+			<button onclick="diagrafh();">Διαγραφή</button>
+			<button onclick="kline();">Κλίση</button></td></tr>
+		</table>
+		</div>
+		<br/>
+		<div id="αποτελέσματα" align="center">αποτελέσματα</div>
+		</td>
+		<td>Μεταδεδομένα<br/>
+		<input type="text" id="μόνομα" list="μετά_συμπλήρωση" autocomplete="on"></input>
+		<datalist id="μετά_συμπλήρωση"></datalist>
+		<input type="text" id="μτιμή"></input>
+		<button onclick="προσθήκη_μετα();">+</button>
+		<button onclick="αφαίρεση_μετα();">-</button>
+		<button onclick="zero_μετα();">0</button><br/>
+		<select onclick="επιλογή_μετα();" id="μεταδεδομένα" size=8 style="width:100%;"></select>
+		</td></tr>
+	<tr><td>Κλίμακες<br/>
+	<input type="text" id="κόνομα" list="κλίμα_συμπλήρωση" autocomplete="on"></input>
+	<datalist id="κλίμα_συμπλήρωση" ></datalist>
+		<input type="text" id="κτιμή"></input>
+		<button onclick="προσθήκη_κλίμα();">+</button>
+		<button onclick="αφαίρεση_κλίμα();">-</button>
+		<button onclick="zero_κλιμα();">0</button><br/>
+		<select onclick="επιλογή_κλιμα();" id="κλίμακες" size=8 style="width:100%;"></select></td></tr>
+</table>
+</div>
+</div>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<TITLE>ἑγἐ - Ἑλληνικά Γλωσσικά Ἐργαλεία: API</TITLE>
+</head>
+<BODY LANG="el-GR">
+<div>
+<table align="center" >
+	<tr><td nowrap><h2 align="left" style="margin: 0px; padding: 0;">Ἑλληνικά Γλωσσικά Ἐργαλεία</h2></td>
+	<td width="70%" align="center"><a href='log_out'><h3>Έξοδος</h3></a></td>
+	<td nowrap><h2 align="right" style="margin: 0px; padding: 0;">Ἑλληνικά: API<a href='index.html'>⤶</a></h2></td></tr>
+</table>
+</div>
+<div align="center" style="margin: 0px; padding: 0;"><br />
+<table width="50%" align="center" >
+	<tr><td colspan="2" ><h3>Αναγνώριση</h3></a></td>
+	<tr><td colspan="2" nowrap><b>http://localhost:7000/HLT/Ελληνικά/αναγνώριση/</b><cite>διάλεκτος</cite>/<cite>λέξεις</cite></td></tr>
+	<tr><td colspan="2">Αναγνωρίζει λέξεις.</td></tr>
+	<tr><td><cite>διάλεκτος</cite></td><td>Η διάλεκτος του κειμένου. Αποδεκτές τιμές: δημοτική ή κοινή.</td></tr>
+	<tr><td><cite>λέξεις</cite></td><td>Οι λέξεις προς αναγνώριση, χωρισμένες με κόμματα ή κενά.</td></tr>
+	<tr><td colspan="2">Επιστρέφει:</td></tr>
+	<tr><td colspan="2">Μία λίστα του τύπου:[[λέξη1,[μέρος του λόγου1],[ανάλυση1]],]</td></tr>
+	<tr><td><br/></td></tr>
+	<tr><td colspan="2"><h3>Ανάλυση</h3></td></tr>
+	<tr><td colspan="2" nowrap><b>http://localhost:7000/HLT/Ελληνικά/ανάλυση/</b><cite>διάλεκτος</cite>/<cite>κείμενο</cite></td></tr>
+	<tr><td colspan="2">Αναλύει κείμενα με βάση το συντακτικό.</td></tr>
+	<tr><td><cite>διάλεκτος</cite></td><td>Η διάλεκτος του κειμένου. Αποδεκτές τιμές: δημοτική ή κοινή.</td></tr>
+	<tr><td><cite>κείμενο</cite></td><td>To προς ανάλυση κείμενο.</td></tr>
+	<tr><td colspan="2">Επιστρέφει:</td></tr>
+	<tr><td colspan="2">Μία λίστα του τύπου:[[λέξη1,[μέρος_του_λόγου1],[ανάλυση1]],[στίξη1,'στίξη', όνομα_στίξης1]]</td></tr>
+	<tr><td><br/></td></tr>
+	<tr><td colspan="2"><h3>Πολυτονισμός</h3></td></tr>
+	<tr><td colspan="2" nowrap><b>http://localhost:7000/HLT/Ελληνικά/πολυτονισμός/</b><cite>διάλεκτος</cite>/<cite>κείμενο</cite></td></tr>
+	<tr><td colspan="2">Βάζει τόνους και πνεύματα στο κείμενο.</td></tr>
+	<tr><td><cite>διάλεκτος</cite></td><td>Η διάλεκτος του κειμένου. Αποδεκτές τιμές: δημοτική ή κοινή.</td></tr>
+	<tr><td><cite>κείμενο</cite></td><td>To κείμενο προς πολυτονισμό.</td></tr>
+	<tr><td colspan="2">Επιστρέφει:</td></tr>
+	<tr><td colspan="2">Πολυτονισμένο κείμενο.</td></tr>
+	<tr><td><br/></td></tr>
+	<tr><td colspan="2"><h3>Κλίση</h3></td></tr>
+	<tr><td colspan="2" nowrap><b>http://localhost:7000/HLT/Ελληνικά/κλίση/</b><cite>διάλεκτοι</cite>/<cite>λέξεις</cite></td></tr>
+	<tr><td colspan="2">Κλίνη τις λέξεις στις διαλέκτους.</td></tr>
+	<tr><td><cite>διάλεκτοι</cite></td><td>Οι διάλεκτοι για την αναγνώριση των λέξεων. Αποδεκτές τιμές: δημοτική ή κοινή.</td></tr>
+	<tr><td><td>η τιμές του διάλεκτοι είναι ["κοινή"], ["δημοτική"], ["κοινή", "δημοτική"]</td></tr>
+	<tr><td><cite>λέξεις</cite></td><td>Οι λέξεις προς κλίση, χωρισμένες με κόμματα ή κενά.</td></tr>
+	<tr><td colspan="2">Επιστρέφει</td></tr>
+	<tr><td colspan="2">Την δομή [λέξη1, {μέρος_του_λόγου1:[{κλίση1}]}]</td></tr>
+	<tr><td colspan="2">Αν το μέρος_του_λόγου1 είναι ρήμα τότε η κλίση1 έχει την μορφή {χρόνος1:{φωνή1:{έγκλιση:[κλιμένη_λέξη1,]}}}</td></tr>
+	<tr><td colspan="2">Αν το μέρος_του_λόγου1 είναι ουσιαστικό, επίθετο, μετοχή, αντωνυμία τότε η κλίση1 έχει την μορφή {γένος1:[κλιμένη_λέξη1,]}</td></tr>
+	<tr><td colspan="2">Αν το μέρος_του_λόγου1 είναι αντωνυμία με πρόσωπο τότε η κλίση1 έχει την μορφή {πρόσωπο1:{γένος1:[κλιμένη_λέξη1,]}}</td></tr>
+	<tr><td colspan="2">Αν το μέρος_του_λόγου1 είναι άκλητο τότε η κλίση1 έχει την μορφή {'άκλητο':κλιμένη_λέξη1}</td></tr>
+	<tr><td><br/></td></tr>
+	<tr><td colspan="2"><h3>IME</h3></td></tr>
+	<tr><td colspan="2" nowrap><b>http://localhost:7000/HLT/Ελληνικά/IME/</b><cite>διάλεκτος</cite>/<cite>εντολή</cite>/<cite>λέξεις</cite></td></tr>
+	<tr><td colspan="2">Λειτουργίες για αυτόματη συμπλήρωση κειμένου.<br/> Επιστρέφει λέξεις οι οποίες συμφωνούν κατά γένος, πτώση, αριθμό, πρόσωπο με τις προηγούμενες, εκτός αν μηδενιστεί.</td></tr>
+	<tr><td><cite>διάλεκτος</cite></td><td>Η διάλεκτος για εύρεση υποψήφιων λέξεων. Αποδεκτές τιμές: δημοτική ή κοινή.</td></tr>
+	<tr><td><cite>εντολή</cite></td><td>
+		<table>
+			<tr><th>εντολές</th><th>επιστρέφουν</th></tr>
+			<tr><th><cite>μηδενισμός</cite></th><td>['OK'] σβήνει την μνήμη</td></tr>
+			<tr><th><cite>υποψηφιότητες</cite></th><td> ["υποψηφιότητες",[λέξη1,]]</td></tr>
+			<tr><th><cite>επιλογή</cite></th><td>['OK'], αν καταχωρήθηκε η λέξη</td></tr>
+			<tr><th></th><td>[], αν απέτυχε</td></tr>
+			<tr><th></th><td>["καταλήξεις",[κατάληξη1,]]</td></tr>
+		</table>
+	</td></tr>
+	<tr><td><cite>γράμματα</cite></td><td>Τα αρχικά γράμματα της λέξης, <b>χωρις στίξη</b>.</td></tr>
+	<!-- <td align="center"><a href='.'><h3>TTS</h3></a></td></tr>
+	<tr><td align="center"><a href='.'><h3>Ορθογραφία</h3></a></td>
+	<td align="center"><a href='.'><h3>Μετάφραση</h3></a></td></tr>
+	<tr><td align="center"><a href='.'><h3>Α.Ι.</h3></a></td>
+	<td align="center"><a href='.'><h3>Ψυχολογία</h3></a></td></tr> -->
+</table>
+</div>
+</BODY>
+</HTML>

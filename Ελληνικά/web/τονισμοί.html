@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+<TITLE>ἑγἐ - Ἑλληνικά Γλωσσικά Ἐργαλεία: Τονισμοί</TITLE>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/tonismoi.js"></script>
+</head>
+<BODY LANG="el-GR" DIR="LTR" onload="EN_APXH()">
+	<div align="center" style="margin: 0px; padding: 0;">
+		<br />
+		<div align="center" class="main">
+			<div align="center" id="content">
+				<div>
+					<table align="center">
+						<tr>
+							<td nowrap><h2 align="left" style="margin: 0px; padding: 0;">Ἑλληνικά
+									Γλωσσικά Ἐργαλεία</h2></td>
+							<td width="70%" align="center"><a href='log_out'><h3>Έξοδος</h3></a></td>
+							<td nowrap><h2 align="right"
+									style="margin: 0px; padding: 0;">
+									Ἑλληνικά: Τονισμοί <a href='index.html'>⤶</a>
+								</h2></td>
+						</tr>
+					</table>
+				</div>
+				<table>
+					<tr>
+						<th id="ουσιαστικό" onclick="allagiMTL('ουσιαστικό');">Ουσιαστικά</th>
+						<th id="επίθετο" onclick="allagiMTL('επίθετο');">Επίθετα</th>
+						<th id="ρήμα" onclick="allagiMTL('ρήμα');">Ρήματα</th>
+					</tr>
+					<tr>
+						<td colspan=5>
+							<div>
+								<select id="κκατηγορίες" width="80%" size=8
+									onclick="loadIstoria();" onkeyup="loadIstoria();"></select><br>
+								Διάλεκτος:<select id="διάλεκτος" onchange="updateTonismous2();"></select>
+								<button onclick="nea()">Νέο</button>
+								<button
+									onclick="$('κκατηγορίες').selectedIndex = -1;while ($('ιστορία').length>0) {$('ιστορία').remove(0);};">Αντιγραφή</button>
+								<button onclick="apothikeusi();">Αποθήκευση</button>
+								<button onclick="diagrafi();">Διαγραφή</button>
+								<button onclick="boh_theia();">Βοήθεια</button>
+								<br>
+								<textarea id="είσοδος"
+									style="font-family: monospace; font-size: 18;" cols=80; rows=10></textarea>
+							</div>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td>ιστορικό</td>
+								</tr>
+								<tr>
+									<td width="100%"><select id="ιστορία" width="100%" size=8
+										onclick="epilogiIstorias();" onkeyup="epilogiIstorias();"></select></td>
+								</tr>
+								<tr>
+									<td><button onclick="trexon()">Τρέχον</button></td>
+								</tr>
+								<tr>
+									<td>Ἐτικέτες<input id="ἐτικέτες" type="text"
+										style="width: 100%;"></input></td>
+								</tr>
+								<tr>
+									<td>Παρατηρήσεις<br /> <textarea id="Παρατηρήσεις" rows=4
+											style="width: 100%;"></textarea></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</BODY>
+</HTML>
